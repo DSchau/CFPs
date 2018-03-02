@@ -34,7 +34,7 @@ export default function Proposal({ data }) {
         <meta name="description" content={description} />
         <meta name="og:description" content={description} />
         <meta name="twitter:description" content={description} />
-        <meta name="keywords" content={tags.join(', ')} />
+        {tags && tags.length > 0 && <meta name="keywords" content={tags.join(', ')} />}
         <meta name="og:title" content={title} />
         <meta name="og:type" content="article" />
         <meta name="author" content="Dustin  Schau" />

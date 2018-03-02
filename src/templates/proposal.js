@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import Helmet from 'react-helmet';
 
 import { FADE_IN_BOTTOM } from '../style';
 
@@ -24,10 +25,25 @@ const Content = styled.section({
 
 export default function Proposal({ data }) {
   const { proposal } = data;
+  const { description, title, tags } = proposal.frontmatter;
   return (
     <Container>
+      <Helmet>
+        <title>{title}</title>
+        <link rel="author" href="https://dustinschau.com" />
+        <meta name="description" content={description} />
+        <meta name="og:description" content={description} />
+        <meta name="twitter:description" content={description} />
+        <meta name="keywords" content={tags.join(', ')} />
+        <meta name="og:title" content={title} />
+        <meta name="og:type" content="article" />
+        <meta name="author" content="Dustin  Schau" />
+        <meta name="article:author" content="Dustin Schau" />
+        <meta name="twitter:creator" content="@schaudustin" />
+      </Helmet>
+
       <Content>
-        <Title>{proposal.frontmatter.title}</Title>
+        <Title>{title}</Title>
         <div dangerouslySetInnerHTML={{ __html: proposal.html }} />
       </Content>
     </Container>

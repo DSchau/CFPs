@@ -14,8 +14,8 @@ const TemplateWrapper = ({ children, location }) => {
       <Helmet
         titleTemplate={`Dustin Schau | %s`}
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' }
+          { name: 'description', content: 'The collection of proposals for various conferences' },
+          { name: 'keywords', content: 'proposals, javascript, frontend, developer, programming' }
         ]}
       />
       <Header height={headerHeight} isHome={isHome} />

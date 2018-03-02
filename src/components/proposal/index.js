@@ -37,6 +37,8 @@ export const proposalFragment = graphql`
       slug
     }
     frontmatter {
+      description
+      tags
       title
     }
   }

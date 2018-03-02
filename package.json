@@ -29,7 +29,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "precommit": "pretty-quick",
+    "precommit": "pretty-quick --staged",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",

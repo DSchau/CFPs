@@ -1,4 +1,4 @@
-# proposals
+# **C**all **F**or **P**aper Submissions
 
 Herein lies the statically generated site for all of the call for proposals I've submitted to various conferences.
 

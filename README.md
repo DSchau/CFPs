@@ -1,13 +1,17 @@
-# gatsby-starter-default
-The default Gatsby starter
+# proposals
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Herein lies the statically generated site for all of the call for proposals I've submitted to various conferences.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+<!-- AUTO-GENERATED-CONTENT:START (PROPOSALS:path=./content) -->
+## 2018
 
-## Deploy
+- [gatsby-static-site-generation-with-react](./content/2018/gatsby-static-site-generation-with-react.md)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## 2017
+
+- [css-in-js](./content/2017/css-in-js.md)
+- [native-development](./content/2017/native-development.md)
+- [opening-the-door-to-open-source](./content/2017/opening-the-door-to-open-source.md)
+- [unit-testing-all-stars](./content/2017/unit-testing-all-stars.md)
+
+<!-- AUTO-GENERATED-CONTENT:END -->

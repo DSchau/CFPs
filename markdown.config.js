@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const matter = require('gray-matter');
+const slugify = require('limax');
 
 module.exports = {
   transforms: {
@@ -21,8 +23,11 @@ module.exports = {
               return b.split('/').shift() - a.split('/').shift();
             })
             .map(file => {
-              const title = file.split('/').pop().split('.md').shift();
-              return `- [${title}](${contentPath}/${file})`
+              const parsed = fs.readFileSync(path.join(contentPath, file), 'utf8');
+              const meta = matter(parsed);
+              const year = file.split('/').shift();
+              const slug = `proposals/${year}/${slugify(meta.data.title)}`;
+              return `- [${file}](https://proposals.dustinschau.com/proposals/year/${slug})`
             }))
             .concat('');
         }, []);

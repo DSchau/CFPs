@@ -19,17 +19,17 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-emotion',
     {
-          resolve: 'gatsby-plugin-typography',
-          options: {
-            pathToConfigModule: 'src/util/typography',
-          },
-        },
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/util/typography'
+      }
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: ['gatsby-remark-images']
       }
-    },
+    }
   ].concat(proposals)
 };

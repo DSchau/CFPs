@@ -23,7 +23,7 @@ export function Proposal({ excerpt, fields, frontmatter }) {
   return (
     <Container>
       <Title>{frontmatter.title}</Title>
-      <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+      <div dangerouslySetInnerHTML={{ __html: frontmatter.description || excerpt }} />
     </Container>
   );
 }

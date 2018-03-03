@@ -1,5 +1,6 @@
 ---
 title: "Comparison of Native JavaScript Development Solutions"
+date: "2017-02-10T05:00:00.000Z"
 ---
 
 ## Abstract

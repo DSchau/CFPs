@@ -24,7 +24,7 @@ export const pageQuery = graphql`
             type:{eq:"proposal"}
           }
         }
-        sort:{order:ASC, fields:[frontmatter___title]}
+        sort:{order:DESC, fields:[frontmatter___date]}
       ) {
         edges {
           proposal:node {

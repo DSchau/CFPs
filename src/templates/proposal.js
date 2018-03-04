@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'react-emotion';
 import Helmet from 'react-helmet';
+import 'prismjs/themes/prism-okaidia.css';
 
+import { ProposalTitle } from '../components';
 import { FADE_IN_BOTTOM } from '../style';
 
 const Container = styled.div({
@@ -19,13 +21,19 @@ const Content = styled.section({
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: '#FFF',
+  overflow: 'hidden',
+  float: 'left',
   outline: '1px solid rgba(0,0,0,0.125)',
+  boxShadow: '0 0 4px rgba(0, 0, 0, 0.25)'
+});
+
+const Post = styled.div({
   padding: '1rem'
 });
 
 export default function Proposal({ data }) {
   const { proposal } = data;
-  const { description, title, tags } = proposal.frontmatter;
+  const { date, description, title, tags } = proposal.frontmatter;
   return (
     <Container>
       <Helmet>
@@ -43,8 +51,8 @@ export default function Proposal({ data }) {
       </Helmet>
 
       <Content>
-        <Title>{title}</Title>
-        <div dangerouslySetInnerHTML={{ __html: proposal.html }} />
+        <ProposalTitle date={date} hover={false}>{title}</ProposalTitle>
+        <Post dangerouslySetInnerHTML={{ __html: proposal.html }} />
       </Content>
     </Container>
   );

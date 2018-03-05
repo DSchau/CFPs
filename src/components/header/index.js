@@ -6,28 +6,31 @@ import particlesConfig from '../../particles.json';
 
 import { ANIMATE_BACKGROUND, MEDIA, THEME } from '../../style';
 
-const Container = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: 'linear-gradient(#ffa81f, #d85d15)',
-  backgroundSize: '250% 250%',
-  backgroundColor: THEME.accentColor,
-  animation: `${ANIMATE_BACKGROUND} 10s ease infinite`,
-  position: 'fixed',
-  transition: 'height 250ms ease-in-out',
-  width: '100%',
-  '.particles-js-canvas-el': {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0
-  }
-}, ({ height }) => ({
-  height
-}));
+const Container = styled.div(
+  {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'linear-gradient(#ffa81f, #d85d15)',
+    backgroundSize: '250% 250%',
+    backgroundColor: THEME.accentColor,
+    animation: `${ANIMATE_BACKGROUND} 10s ease infinite`,
+    position: 'fixed',
+    transition: 'height 250ms ease-in-out',
+    width: '100%',
+    '.particles-js-canvas-el': {
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0
+    }
+  },
+  ({ height }) => ({
+    height
+  })
+);
 
 const LogoContainer = styled.div({
   display: 'flex',
@@ -95,7 +98,11 @@ export class Header extends Component {
     return (
       <Container id="header" {...rest}>
         <LogoContainer>
-          <Link to="/"><Logo>Dustin <span css={{ fontWeight: 400 }}>Schau</span></Logo></Link>
+          <Link to="/">
+            <Logo>
+              Dustin <span css={{ fontWeight: 400 }}>Schau</span>
+            </Logo>
+          </Link>
         </LogoContainer>
         {isHome && <Title>Proposals</Title>}
       </Container>

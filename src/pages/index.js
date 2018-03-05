@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
-import { Proposals } from '../components'
+import { Proposals } from '../components';
 
 export default function IndexPage({ data }) {
   const { proposals } = data;
@@ -18,19 +18,15 @@ export default function IndexPage({ data }) {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    proposals:allMarkdownRemark(
-        filter:{
-          fields:{
-            type:{eq:"proposal"}
-          }
-        }
-        sort:{order:DESC, fields:[frontmatter___date]}
-      ) {
-        edges {
-          proposal:node {
-            ...ProposalFragment
-          }
+    proposals: allMarkdownRemark(
+      filter: { fields: { type: { eq: "proposal" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        proposal: node {
+          ...ProposalFragment
         }
       }
+    }
   }
 `;

@@ -8,13 +8,13 @@ const typography = new Typography({
   googleFonts: [
     {
       name: 'Montserrat',
-      styles: ['400', '700'],
+      styles: ['400', '700']
     },
     {
       name: 'Bitter',
       styles: ['400', '700']
     }
-  ],
+  ]
 });
 
 export default typography;

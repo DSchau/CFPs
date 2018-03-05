@@ -42,7 +42,8 @@ export default function Proposal({ data }) {
         <meta name="description" content={description} />
         <meta name="og:description" content={description} />
         <meta name="twitter:description" content={description} />
-        {tags && tags.length > 0 && <meta name="keywords" content={tags.join(', ')} />}
+        {tags &&
+          tags.length > 0 && <meta name="keywords" content={tags.join(', ')} />}
         <meta name="og:title" content={title} />
         <meta name="og:type" content="article" />
         <meta name="author" content="Dustin  Schau" />
@@ -51,7 +52,9 @@ export default function Proposal({ data }) {
       </Helmet>
 
       <Content>
-        <ProposalTitle date={date} hover={false}>{title}</ProposalTitle>
+        <ProposalTitle date={date} hover={false}>
+          {title}
+        </ProposalTitle>
         <Post dangerouslySetInnerHTML={{ __html: proposal.html }} />
       </Content>
     </Container>
@@ -60,11 +63,8 @@ export default function Proposal({ data }) {
 
 export const pageQuery = graphql`
   query ProposalBySlugQuery($slug: String!, $year: Int!) {
-    proposal:markdownRemark(
-      fields:{
-        slug:{eq: $slug}
-        year:{ eq: $year }
-      }
+    proposal: markdownRemark(
+      fields: { slug: { eq: $slug }, year: { eq: $year } }
     ) {
       ...ProposalFragment
     }

@@ -32,13 +32,7 @@ module.exports = {
         plugins: [
           'gatsby-remark-images',
           'gatsby-remark-autolink-headers',
-          'gatsby-remark-prismjs',
-          {
-            resolve: 'gatsby-remark-toc',
-            options: {
-              include: ['content/**/*.md']
-            }
-          }
+          'gatsby-remark-prismjs'
         ]
       }
     }

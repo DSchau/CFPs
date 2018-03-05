@@ -25,7 +25,9 @@ export function Proposal({ excerpt, fields, frontmatter }) {
   return (
     <Container>
       <Title date={frontmatter.date}>{frontmatter.title}</Title>
-      <Content dangerouslySetInnerHTML={{ __html: frontmatter.description || excerpt }} />
+      <Content
+        dangerouslySetInnerHTML={{ __html: frontmatter.description || excerpt }}
+      />
     </Container>
   );
 }
@@ -41,7 +43,7 @@ export const proposalFragment = graphql`
       slug
     }
     frontmatter {
-      date(formatString:"MMMM Do, YYYY")
+      date(formatString: "MMMM Do, YYYY")
       description
       tags
       title

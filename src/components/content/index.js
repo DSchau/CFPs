@@ -9,11 +9,9 @@ const Container = styled.main({
   margin: '0 auto',
   padding: '1rem',
   width: '100%',
-  maxWidth: 960,
+  maxWidth: 960
 });
 
 export function Content({ children, render = children, ...rest }) {
-  return (
-    <Container {...rest}>{render()}</Container>
-  );
+  return <Container {...rest}>{render()}</Container>;
 }

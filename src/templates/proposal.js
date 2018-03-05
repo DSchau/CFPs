@@ -14,7 +14,16 @@ const Container = styled.div({
 });
 
 const Title = styled.h1({
+  fontWeight: 700,
   textAlign: 'center'
+});
+
+const ConferenceTitle = styled.h2({
+  fontSize: 22,
+  fontWeight: 400,
+  textAlign: 'center',
+  textTransform: 'uppercase',
+  margin: 0
 });
 
 const Content = styled.section({
@@ -33,7 +42,7 @@ const Post = styled.div({
 
 export default function Proposal({ data }) {
   const { proposal } = data;
-  const { date, description, title, tags } = proposal.frontmatter;
+  const { conference, date, description, title, tags } = proposal.frontmatter;
   return (
     <Container>
       <Helmet>
@@ -52,8 +61,8 @@ export default function Proposal({ data }) {
       </Helmet>
 
       <Content>
-        <ProposalTitle date={date} hover={false}>
-          {title}
+        <ProposalTitle date={date} hover={false} title={title}>
+          {conference && <ConferenceTitle>{conference}</ConferenceTitle>}
         </ProposalTitle>
         <Post dangerouslySetInnerHTML={{ __html: proposal.html }} />
       </Content>

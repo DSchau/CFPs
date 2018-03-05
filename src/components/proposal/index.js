@@ -24,7 +24,7 @@ const Content = styled.div({
 export function Proposal({ excerpt, fields, frontmatter }) {
   return (
     <Container>
-      <Title date={frontmatter.date}>{frontmatter.title}</Title>
+      <Title date={frontmatter.date} title={frontmatter.title} />
       <Content
         dangerouslySetInnerHTML={{ __html: frontmatter.description || excerpt }}
       />
@@ -47,6 +47,7 @@ export const proposalFragment = graphql`
       description
       tags
       title
+      conference
     }
   }
 `;

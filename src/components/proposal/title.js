@@ -30,21 +30,24 @@ const PostDate = styled.h2({
   textAlign: 'center'
 });
 
-export function Title({ children, date, hover }) {
+export function Title({ children, date, hover, title }) {
   return (
     <Container
       css={{
-        backgroundColor: getColor(children),
+        backgroundColor: getColor(title),
         ...(hover !== false
           ? {
               ':hover': {
-                backgroundColor: getColor(children, 75, 35)
+                backgroundColor: getColor(title, 75, 35)
               }
             }
           : {})
       }}
     >
-      <Heading>{children}</Heading>
+      <Heading>
+        {title}
+        {children}
+      </Heading>
       {date && <PostDate>{date}</PostDate>}
     </Container>
   );

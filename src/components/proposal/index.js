@@ -18,6 +18,7 @@ const Container = styled.div({
 });
 
 const Content = styled.div({
+  fontSize: 16,
   padding: '1rem'
 });
 

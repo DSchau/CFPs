@@ -38,7 +38,7 @@ export function Title({ children, date, hover, title }) {
         ...(hover !== false
           ? {
               ':hover': {
-                backgroundColor: getColor(title, 75, 35)
+                backgroundColor: getColor(title, 60, 45)
               }
             }
           : {})

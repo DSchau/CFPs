@@ -10,6 +10,7 @@ module.exports = {
       const base = path.resolve(contentPath);
       const files = fs
         .readdirSync(base)
+        .filter(file => fs.statSync(path.join(base, file)).isDirectory())
         .map(dir => {
           return fs
             .readdirSync(path.join(base, dir))

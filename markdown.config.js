@@ -33,7 +33,7 @@ module.exports = {
                   );
                   const meta = matter(parsed);
                   const year = file.split('/').shift();
-                  const slug = `proposals/${year}/${slugify(meta.data.title)}`;
+                  const slug = `/${year}/${slugify(meta.data.title)}`;
                   return `- [${
                     meta.data.title
                   }](https://proposals.dustinschau.com/${slug})`;

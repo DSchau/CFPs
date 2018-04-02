@@ -44,9 +44,9 @@
     "gray-matter": "~3.1.1",
     "husky": "~0.14.3",
     "limax": "~1.6.0",
-    "markdown-magic": "~0.1.20",
+    "markdown-magic": "~0.1.21",
     "mdast-util-toc": "~2.0.1",
-    "micromatch": "~3.1.9",
+    "micromatch": "~3.1.10",
     "prettier": "~1.11.1",
     "pretty-quick": "~1.4.1"
   }

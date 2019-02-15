@@ -1,6 +1,6 @@
 ---
 title: "Gatsby: Static Site Generation with React"
-date: "2018-03-01T05:00:00.000Z"
+date: 2018-03-01T05:00:00.000Z
 tags:
   - React
   - Web performance

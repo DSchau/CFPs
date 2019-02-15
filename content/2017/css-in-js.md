@@ -1,7 +1,9 @@
 ---
 title: "CSS in JS: Benefits, Drawbacks, and Tools"
-date: "2017-07-01T05:00:00.000Z"
+date: 2017-07-01T05:00:00.000Z
 conference: Thunderplains
+draft: false
+excerpt: This was a talk given at ThunderPlains in Oklahoma City about CSS in JS. It intended to be a gentle introduction to CSS in JS and some best practices around the budding practice.
 ---
 
 ## Abstract

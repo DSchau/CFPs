@@ -4,50 +4,25 @@
   "version": "1.0.0",
   "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
   "dependencies": {
-    "@dschau/particles.js": "~2.0.0",
-    "emotion": "~9.0.2",
-    "emotion-server": "~9.0.2",
-    "gatsby": "^1.9.218",
-    "gatsby-image": "~1.0.41",
-    "gatsby-link": "^1.6.37",
-    "gatsby-plugin-catch-links": "~1.0.19",
-    "gatsby-plugin-emotion": "~1.1.15",
-    "gatsby-plugin-react-helmet": "^2.0.5",
-    "gatsby-plugin-react-next": "~1.0.10",
-    "gatsby-plugin-sharp": "~1.6.37",
-    "gatsby-plugin-typography": "~1.7.16",
-    "gatsby-remark-autolink-headers": "~1.4.13",
-    "gatsby-remark-images": "~1.5.53",
-    "gatsby-remark-prismjs": "~1.2.17",
-    "gatsby-source-filesystem": "~1.5.25",
-    "gatsby-transformer-remark": "~1.7.34",
-    "gatsby-transformer-sharp": "~1.6.22",
-    "normalize.css": "~8.0.0",
-    "react-emotion": "~9.0.2",
-    "react-helmet": "^5.2.0",
-    "typography": "~0.16.6"
+    "@dschau/gatsby-theme-blog": "^0.2.3",
+    "gatsby": "^2.1.4",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby",
+    "proposals",
+    "cfps",
+    "blog"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "precommit": "pretty-quick --staged",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "markdown": "md-magic",
+    "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "gray-matter": "~3.1.1",
-    "husky": "~0.14.3",
-    "limax": "~1.6.0",
-    "markdown-magic": "~0.1.21",
-    "mdast-util-toc": "~2.0.1",
-    "micromatch": "~3.1.10",
-    "prettier": "~1.11.1",
-    "pretty-quick": "~1.4.1"
   }
 }

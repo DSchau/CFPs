@@ -1,6 +1,6 @@
 ---
 title: "Opening the Door to Open Source"
-date: "2017-02-01T05:00:00.000Z"
+date: 2017-02-01T05:00:00.000Z
 ---
 
 Each of us likely use some aspect of open source code, but relatively few ever make the leap into contributing back to these tools and frameworks that so vastly improve our development efforts. Why is this? What are the barriers to entry and how we can reduce and tear down any obstacles into contributing back? Once we tear down these misconceptions or obstacles, how do we actually get started with contributing back?

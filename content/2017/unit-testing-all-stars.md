@@ -1,6 +1,6 @@
 ---
 title: "Unit Testing in Javascript: Meet the New All-Stars"
-date: "2017-06-01T05:00:00.000Z"
+date: 2017-06-01T05:00:00.000Z
 ---
 
 ## Abstract

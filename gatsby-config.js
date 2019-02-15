@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     author: 'Dustin Schau',
+    subTitle: 'Proposals',
     social: {
       twitter: `schaudustin`
     }

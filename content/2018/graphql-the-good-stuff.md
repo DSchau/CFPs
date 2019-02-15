@@ -1,6 +1,6 @@
 ---
 title: "GraphQL: The Good Stuff"
-date: "2018-03-02T05:00:00.000Z"
+date: 2018-03-02T05:00:00.000Z
 tags:
   - GraphQL
   - REST

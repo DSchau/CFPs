@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
   "dependencies": {
-    "@dschau/gatsby-theme-blog": "^0.2.0",
-    "gatsby": "^2.0.111"
+    "@dschau/gatsby-theme-blog": "0.2.3-alpha.9",
+    "gatsby": "^2.1.4",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   },
   "keywords": [
     "gatsby",

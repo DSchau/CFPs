@@ -1,5 +1,5 @@
 ---
-title: "Gatsby: Static Site Generation with React"
+title: 'Gatsby: Static Site Generation with React'
 date: 2018-03-01T05:00:00.000Z
 tags:
   - React
@@ -7,7 +7,7 @@ tags:
   - Static site
   - Automated tooling
   - JavaScript
-description: "Static site generation has been solved with Jekyll, Hugo, et al. However, a challenger looms, and that challenger is Gatsby. This presentation presents the argument for how writing a static site in React is truly transformative"
+description: 'Static site generation has been solved with Jekyll, Hugo, et al. However, a challenger looms, and that challenger is Gatsby. This presentation presents the argument for how writing a static site in React is truly transformative'
 ---
 
 ## Abstract

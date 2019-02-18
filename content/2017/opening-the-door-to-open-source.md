@@ -1,5 +1,5 @@
 ---
-title: "Opening the Door to Open Source"
+title: 'Opening the Door to Open Source'
 date: 2017-02-01T05:00:00.000Z
 ---
 

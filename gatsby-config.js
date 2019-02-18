@@ -3,16 +3,16 @@ module.exports = {
     author: 'Dustin Schau',
     subTitle: 'Proposals',
     social: {
-      twitter: `schaudustin`
-    }
+      twitter: `schaudustin`,
+    },
   },
   __experimentalThemes: [
     {
       resolve: `@dschau/gatsby-theme-blog`,
       options: {
         blogContent: 'content',
-        root: __dirname
-      }
-    }
-  ]
-}
+        root: __dirname,
+      },
+    },
+  ],
+};

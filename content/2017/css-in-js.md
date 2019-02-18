@@ -1,5 +1,5 @@
 ---
-title: "CSS in JS: Benefits, Drawbacks, and Tools"
+title: 'CSS in JS: Benefits, Drawbacks, and Tools'
 date: 2017-07-01T05:00:00.000Z
 conference: Thunderplains
 draft: false

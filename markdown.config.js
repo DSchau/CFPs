@@ -42,6 +42,6 @@ module.exports = {
             .concat('');
         }, []);
       return files.join('\n');
-    }
-  }
+    },
+  },
 };

@@ -1,47 +1,27 @@
 const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
+const globby = require('globby')
 const slugify = require('limax')
 
 module.exports = {
   transforms: {
-    PROPOSALS(content, options) {
-      const { path: contentPath } = options
-      const base = path.resolve(contentPath)
-      const files = fs
-        .readdirSync(base)
-        .filter(file => fs.statSync(path.join(base, file)).isDirectory())
-        .map(dir => {
-          return fs
-            .readdirSync(path.join(base, dir))
-            .map(file => path.join(dir, file))
-        })
+    PROPOSALS(_, options) {
+      return globby
+        .sync('content/**/*.md')
         .reverse()
-        .reduce((flattened, files) => {
-          return flattened
-            .concat('## ' + files[0].split('/').shift())
-            .concat('')
-            .concat(
-              files
-                .sort((a, b) => {
-                  return b.split('/').shift() - a.split('/').shift()
-                })
-                .map(file => {
-                  const parsed = fs.readFileSync(
-                    path.join(contentPath, file),
-                    'utf8'
-                  )
-                  const meta = matter(parsed)
-                  const year = file.split('/').shift()
-                  const slug = `/${year}/${slugify(meta.data.title)}`
-                  return `- [${
-                    meta.data.title
-                  }](https://proposals.dustinschau.com/${slug})`
-                })
-            )
-            .concat('')
+        .map(file => {
+          const contents = fs.readFileSync(file, 'utf8')
+          const { data: meta } = matter(contents)
+          const year = file.split('/').shift()
+          const slug = `/${year}/${slugify(meta.title)}`
+          return `- [${
+            meta.title
+          }](https://proposals.dustinschau.com/${slug})\n${
+            meta.excerpt ? `    > ${meta.excerpt}` : ''
+          }`
         }, [])
-      return files.join('\n')
+        .join('\n')
     },
   },
 }
